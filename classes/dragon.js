@@ -3,11 +3,22 @@ class Dragon {
     this.name = name;
     this.color = color;
   }
-  breathesFire() {
 
+  breathesFire() {
+    return `${this.name} breathes fire everywhere! BURN!!!!`
   }
+
+  static getDragons(...dragons){
+    let dragonNames = []
+    dragons.forEach(dragon => {
+      dragonNames.push(dragon.name);
+    })
+    return dragonNames;
+  }
+
 }
 
+module.exports = Dragon;
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
